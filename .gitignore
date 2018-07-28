@@ -1,0 +1,21 @@
+*.db
+*.pyc
+__pycache_/
+.DS_Store
+.env
+*.sqlite3
+
+*.egg-info
+
+build
+generated
+dist
+
+.tox
+.coverage
+
+# logs
+app.log
+app.log.1
+app.log.2
+app.log.3
