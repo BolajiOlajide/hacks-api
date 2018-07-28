@@ -19,3 +19,6 @@ app.log
 app.log.1
 app.log.2
 app.log.3
+
+# static files
+static/
