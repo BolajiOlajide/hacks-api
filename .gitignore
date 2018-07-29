@@ -22,3 +22,6 @@ app.log.3
 
 # static files
 static/
+
+# editor config files
+.vscode/

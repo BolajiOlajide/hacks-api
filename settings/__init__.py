@@ -11,6 +11,6 @@ dotenv_path = join(BASE_DIR, '.env')
 load_dotenv(dotenv_path)
 
 if getenv('HEROKU'):
-    from .prod import *
+	from .prod import *
 else:
-    from .dev import *
+	from .dev import *

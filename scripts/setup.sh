@@ -10,7 +10,6 @@ set -x
 
 
 # run migrations for the DB
-python manage.py makemigrations
 python manage.py migrate
 
 # create a super user
