@@ -32,6 +32,8 @@ class Hack(models.Model):
 	location = models.ForeignKey(Location, on_delete=models.CASCADE)
 	created_at = models.DateField(auto_now_add=True)
 	updated_at = models.DateField(auto_now=True)
+	accepted = models.BooleanField(default=False, blank=False, null=False)
+	image_url = models.URLField(null=True, blank=True)
 
 	def __str__(self):
 		return "Hacks: {}".format(self.name)

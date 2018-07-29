@@ -9,6 +9,7 @@ def format_hack(hack):
 			'id': hack.hackId,
 			'name': hack.name,
 			'description': hack.description,
+			'image_url': hack.image_url,
 			'location': {
 				'location': hack.location.location,
 				'country': hack.location.country
