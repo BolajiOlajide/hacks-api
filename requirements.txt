@@ -3,5 +3,6 @@ django-jet==1.0.7
 django-ratelimit==1.1.0
 djangorestframework==3.8.2
 psycopg2==2.7.5
+python-dotenv==0.8.2
 pytz==2018.5
 whitenoise==3.3.1
