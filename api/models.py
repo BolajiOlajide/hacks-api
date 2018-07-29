@@ -14,10 +14,6 @@ class Location(models.Model):
 		return "Location: {}".format(self.location)
 
 
-	class Meta:
-		ordering = ('locationId',)
-
-
 class Tag(models.Model):
 	tagId = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 	tag = models.CharField(max_length=150, unique=True, blank=False, null=False)
@@ -28,22 +24,14 @@ class Tag(models.Model):
 		return "Tag: {}".format(self.tag)
 
 
-	class Meta:
-		ordering = ('tagId',)
-
-
 class Hack(models.Model):
 	hackId = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 	name = models.CharField(max_length=100, unique=True, blank=False, null=False)
-	desciption = models.TextField(max_length=1024, blank=False, null=False)
+	description = models.TextField(max_length=1024, blank=False, null=False)
 	tag = models.ManyToManyField(Tag)
 	location = models.ForeignKey(Location, on_delete=models.CASCADE)
 	created_at = models.DateField(auto_now_add=True)
 	updated_at = models.DateField(auto_now=True)
-
-
-	class Meta:
-		ordering = ('created_at',)
 
 	def __str__(self):
 		return "Hacks: {}".format(self.name)
