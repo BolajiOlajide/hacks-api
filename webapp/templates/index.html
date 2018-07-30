@@ -1,13 +1,79 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Hacks</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
+		<style>
+			body {
+				display: grid;
+				grid-template-columns: 1fr 3fr;
+				height: 100vh;
+				margin: 0;
+				padding: 0;
+				border: 1rem solid #8fe2d9;
+				box-sizing: border-box;
+				font-family: 'Montserrat', arial, sans-serif;
+			}
+			.sidebar {
+				background: #000;
+				color: #FFF;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.main {
+				background: none;
+				color: #0b0b0b;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#hack-form {
+				width: 40rem;
+				background: #8fe2d9;
+				height: 70vh;
+				box-sizing: border-box;
+				padding: 1rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#spinner {
+				background: #FFF;
+				width: 4rem;
+				height: 4rem;
+				margin: 2rem;
+				animation: spinner 1s infinite;
+			}
+			@keyframes spinner {
+				from {
+					background: #FFF;
+				}
+				to {
+					background: #8fe2d9;
+					transform: rotate(90deg);
+				}
+			}
+		</style>
 	</head>
 	<body>
-		<p>Welcome to Hacks!</p>
+		<div class="sidebar">
+			<img src="https://res.cloudinary.com/proton/image/upload/v1532977669/H_1_hzhrcx.png" alt="hacks-logo" />
+			<h1>Welcome to Hacks!</h1>
+			<h2> Submit your hacks in the form!</h2>
+		</div>
+		<div class="main">
+			<form id="hack-form">
+				<div id="spinner"></div>
+				<h3>Work in Progress!</h3>
+				<h5>Still trying to decide if folks should be able to add hacks themselves!</h5>
+			</form>
+		</div>
 	</body>
 </html>
